@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=divice-width" initial-scale="1">
+    <meta name="keywords" content="Grid, Global">
+    <meta name="description" content="The internationally astounded Global Grid! Explore new peaks of entertainment with this simple interface">
+    <title>Global Grid</title>
+    <style>
+        html, body {
+            margin: 0;
+        }
+
+        .banner {
+            background-color: lightblue;
+        }
+
+        img.title {
+            width: 60px;
+            margin-bottom: -15px;
+            margin-left: 13px;
+            border-radius: 50%;
+        }
+        #infoCard {
+            width: 30px;
+            float: right;
+            margin-right: 10px;
+            margin-top: -105px;
+            border-radius: 50%;
+        }
+
+        .title {
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        img.social {
+            width: 20px;
+            margin-right: -2px;
+        }
+
+        #socials1 {
+            width: 15px;
+        }
+
+        #socialstitle {
+            margin-bottom: -2px;
+        }
+
+        #Game {
+            margin-top: 0px;
+            margin-bottom: 10px;
+            width: 521px;
+            height: 521px;
+            border: 1px solid black;
+            background-color: black;
+            float: left;
+        }
+
+        #footer {
+            margin-left: 5px;
+        }
+
+        .box {
+            height: 12px;
+            width: 12px;
+            background-color: white;
+            margin-top: 1px;
+            margin-left: 1px;
+            float: left;
+            border: 0;
+        }
+        #colorgal {
+            float: left;
+            height: 115px;
+            width: 226px;
+            background-color: lightblue;
+        }
+        .colorbutton {
+            float: left;
+            margin-left: 5px;
+            margin-top: 5px;
+            height: 50px;
+            width: 50px;
+        }
+        #blackButton {
+            background-color: black;
+        }
+        #whiteButton {
+            background-color: white;
+        }
+        #redButton {
+            background-color: red;
+        }
+        #yellowButton {
+            background-color: yellow;
+        }
+        #blueButton {
+            background-color: blue;
+        }
+        #orangeButton {
+            background-color: orange;
+        }
+        #purpleButton {
+            background-color: purple;
+        }
+        #greenButton {
+            background-color: green;
+        }
+        #colorSelectColor {
+            width: 30px;
+            height: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: black;
+            margin-top: auto;
+            margin-bottom: auto;
+            border: 1px solid black;
+        }
+        #colorSelect {
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 10px;
+        }
+        #liveUsers {
+            font-weight: bold;
+        }
+        #customColorGal {
+            float: left;
+            height: 115px;
+            width: 60px;
+            background-color: lightblue;
+        }
+        #customBox1 {
+            background-color: white;
+        }
+        #customBox2 {
+            background-color: white;
+        }
+        #customForm {
+            float: right;
+            height: 115px;
+            width: 120px;
+            margin-right: 5px;
+        }
+        #custom {
+            float: left;
+            height: 115px;
+            width: 226px;
+            background-color: lightblue;
+            margin-left: 45px;
+        }
+        #customButton {
+            float: right;
+            height: 25px;
+            width: 50px;
+        }
+        #allColors {
+            margin-left: auto;
+            margin-right: auto;
+            height: 115px;
+            width: 500px;
+            background-color: lightblue;
+            outline: 1px solid black;
+        }
+        #chat {
+            height: 460px;
+            width: 220px;
+            background-color: lightblue;
+            float: right;
+            overflow: scroll;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        #GameArea {
+            margin-top: 0px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 10px;
+            width: 750px;
+            height: 521px;
+        }
+        .message {
+            height:max-content;
+            min-height: 20px;
+            width: 200px;
+            margin-left: 10px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid black;
+            overflow: hidden;
+        }
+        #chatinput {
+            width: 220px;
+            height: 61px;
+            background-color: lightblue;
+            float: right;
+            outline: 1px solid black;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <img src="Images/Globe.jpg" alt="Globe Image" class="title">
+        <p class="title">Global Grid &copy;</p>
+        <a href="https://willysgrid.com/info/"><img src="Images/infoCard.png" id="infoCard" alt="info card"></a>
+    </div>
+
+    <p id="liveUsers">Users Live: 0</p>
+
+    <div id="GameArea">
+        <div id="Game">
+
+        </div>
+        <div id="chat"></div>
+        <div id="chatinput">
+            <input type="text" id="username" placeholder="Username" style="float: left; margin-left: 10px; width: 110px; height: 15px; margin-top: 7px;">
+            <input type="text" id="chattext" placeholder="Message"style="float: left; margin-left: 10px; width: 110px; height: 15px; margin-top: 5px;">
+            <button type="button" onclick="sendMessage()" style="height: 20px; width: 50px; margin-top: 33px; margin-left: 5px;">Send</button>
+        </div>
+            
+    </div>
+
+    <div id="colorSelect">
+    <div id="colorSelectColor"></div>
+    </div>
+
+    <div id="allColors">
+
+    
+
+    <div id="colorgal">
+        <button type="button" onclick="changeColor('black')" class="colorbutton" id="blackButton"></button>
+        <button type="button" onclick="changeColor('red')" class="colorbutton" id="redButton"></button>
+        <button type="button" onclick="changeColor('orange')" class="colorbutton" id="orangeButton"></button>
+        <button type="button" onclick="changeColor('yellow')" class="colorbutton" id="yellowButton"></button>
+        <button type="button" onclick="changeColor('white')" class="colorbutton" id="whiteButton"></button>
+        <button type="button" onclick="changeColor('green')" class="colorbutton" id="greenButton"></button>
+        <button type="button" onclick="changeColor('blue')" class="colorbutton" id="blueButton"></button>
+        <button type="button" onclick="changeColor('purple')" class="colorbutton" id="purpleButton"></button>
+
+    </div>
+
+    <div id="custom">
+
+        <div id="customColorGal" style="float: left;">
+            <button type="button" onclick="changeColor('white')" class="colorbutton" id="customBox1"></button>
+            <button type="button" onclick="changeColor('white')" class="colorbutton" id="customBox2"></button>
+        </div>
+
+        <div id="customForm">
+
+            <label for="hextext" style="float: left; margin-right: 10px;">Color Hex:</label><br>
+            <input type="text" id="hextext" style="float: left; margin-bottom: 5px; width: 110px;">
+            <button type="button" onclick="changeCustomColor('1')" class="customButton">Save 1</button>
+            <button type="button" onclick="changeCustomColor('2')" class="customButton">Save 2</button>
+
+        </div>
+    </div>
+    </div>
+    
+
+
+    <div id="footer">
+        <h2 id="socialstitle">Visit My:</h2>
+        <img src="/Images/Discord.jpg" alt="discord image" class="social">
+        <a href="https://discord.com/">Discord  </a>
+        <img src="/Images/Youtube.png" alt="youtube image" id="socials1">
+        <a href="https://www.youtube.com/channel/UCDkriXZHbo1VPM8IBEQ9a-g">Youtube  </a>
+        <img src="/Images/Twitter.png" alt="twitter image" id="socials1">
+        <a href="https://twitter.com/">Twitter</a>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client3.js"></script>
+
+</body> 
+</html>
+
